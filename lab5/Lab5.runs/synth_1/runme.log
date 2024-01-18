@@ -1,0 +1,343 @@
+
+*** Running vivado
+    with args -log lab5.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab5.tcl
+
+
+ECHO 已關閉。
+ECHO 已關閉。
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source lab5.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 452.199 ; gain = 160.680
+Command: read_checkpoint -auto_incremental -incremental C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.srcs/utils_1/imports/synth_1/lab5.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.srcs/utils_1/imports/synth_1/lab5.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top lab5 -part xc7a35ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30476
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1269.293 ; gain = 411.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lab5' [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:3]
+INFO: [Synth 8-6157] synthesizing module 'slow_clk' [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'slow_clk' (0#1) [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:168]
+INFO: [Synth 8-6157] synthesizing module 'LCD_module' [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/LCD_module.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'LCD_module' (0#1) [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/LCD_module.v:13]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:160]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (0#1) [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:160]
+INFO: [Synth 8-6157] synthesizing module 'intToChar' [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'intToChar' (0#1) [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'lab5' (0#1) [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:3]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:114]
+WARNING: [Synth 8-3848] Net true_fibo[25] in module/entity lab5 does not have driver. [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/sources_1/new/lab5.v:22]
+WARNING: [Synth 8-3917] design lab5 has port usr_led[3] driven by constant 0
+WARNING: [Synth 8-3917] design lab5 has port usr_led[2] driven by constant 0
+WARNING: [Synth 8-3917] design lab5 has port usr_led[1] driven by constant 0
+WARNING: [Synth 8-3917] design lab5 has port usr_led[0] driven by constant 0
+WARNING: [Synth 8-7129] Port clk[15] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[14] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[13] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[12] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[11] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[10] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[9] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[8] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[7] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[6] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[5] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[4] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[3] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[2] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[1] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[0] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[15] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[14] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[13] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[12] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[11] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[10] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[9] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[8] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[7] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[6] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[5] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[4] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[3] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[2] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[1] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[0] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module debounce is either unconnected or has no load
+WARNING: [Synth 8-7129] Port usr_btn[2] in module lab5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port usr_btn[1] in module lab5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port usr_btn[0] in module lab5 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1366.848 ; gain = 509.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1366.848 ; gain = 509.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1366.848 ; gain = 509.195
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1366.848 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/constrs_1/new/lab5.xdc]
+Finished Parsing XDC File [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/constrs_1/new/lab5.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.src/constrs_1/new/lab5.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab5_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lab5_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1451.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1451.762 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 100   
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 26    
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   5 Input  128 Bit        Muxes := 2     
+	   2 Input  128 Bit        Muxes := 2     
+	   3 Input  126 Bit        Muxes := 1     
+	   3 Input  125 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 100   
+	   2 Input    6 Bit        Muxes := 6     
+	   3 Input    6 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 32    
+	  13 Input    1 Bit        Muxes := 2     
+	  69 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design lab5 has port usr_led[3] driven by constant 0
+WARNING: [Synth 8-3917] design lab5 has port usr_led[2] driven by constant 0
+WARNING: [Synth 8-3917] design lab5 has port usr_led[1] driven by constant 0
+WARNING: [Synth 8-3917] design lab5 has port usr_led[0] driven by constant 0
+WARNING: [Synth 8-7129] Port clk[15] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[14] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[13] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[12] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[11] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[10] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[9] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[8] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[7] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[6] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[5] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[4] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[3] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[2] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[1] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk[0] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[15] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[14] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[13] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[12] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[11] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[10] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[9] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[8] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[7] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[6] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[5] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[4] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[3] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[2] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[1] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_n[0] in module intToChar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port usr_btn[2] in module lab5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port usr_btn[1] in module lab5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port usr_btn[0] in module lab5 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:29 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:38 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:39 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    25|
+|3     |LUT1   |     8|
+|4     |LUT2   |    17|
+|5     |LUT3   |   298|
+|6     |LUT4   |   325|
+|7     |LUT5   |    72|
+|8     |LUT6   |   663|
+|9     |MUXF7  |   168|
+|10    |MUXF8  |    46|
+|11    |FDRE   |   586|
+|12    |FDSE   |    38|
+|13    |IBUF   |     3|
+|14    |OBUF   |    11|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:42 . Memory (MB): peak = 1451.762 ; gain = 509.195
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:44 . Memory (MB): peak = 1451.762 ; gain = 594.109
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1451.762 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 239 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'lab5' is not ideal for floorplanning, since the cellview 'lab5' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1455.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c5d59459
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:53 . Memory (MB): peak = 1455.027 ; gain = 977.988
+INFO: [Common 17-1381] The checkpoint 'C:/Users/user/Desktop/nycu/Dlab/Lab5/Lab5.runs/synth_1/lab5.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lab5_utilization_synth.rpt -pb lab5_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 22:36:26 2023...

@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Nov 13 19:13:00 2023
+# Process ID: 8900
+# Current directory: C:/Users/Shlab_26/Downloads/lab_7/lab_7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9028 C:\Users\Shlab_26\Downloads\lab_7\lab_7\lab_7.xpr
+# Log file: C:/Users/Shlab_26/Downloads/lab_7/lab_7/vivado.log
+# Journal file: C:/Users/Shlab_26/Downloads/lab_7/lab_7\vivado.jou
+# Running On: DESKTOP-DOA6ICE, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 6, Host memory: 17053 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Shlab_26/Downloads/lab_7/lab_7/lab_7.xpr
+upgrade_project -migrate_output_products
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

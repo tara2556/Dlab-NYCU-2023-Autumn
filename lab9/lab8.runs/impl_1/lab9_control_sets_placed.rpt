@@ -1,0 +1,124 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Sun Dec  3 19:27:35 2023
+| Host         : LAPTOP-C2VAUNDT running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab9_control_sets_placed.rpt
+| Design       : lab9
+| Device       : xc7a35ti
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    46 |
+|    Minimum number of control sets                        |    46 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    46 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    32 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |           25441 |         4756 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              27 |            8 |
+| Yes          | No                    | No                     |              82 |           27 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             476 |          136 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------+----------------------------+------------------+----------------+--------------+
+|  Clock Signal  |         Enable Signal        |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------------------+----------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | lcd0/tcode[3]_i_1_n_0        |                            |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | lcd0/icode                   |                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                              | lcd0/SR[0]                 |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | lcd0/lcd_initialized_reg_n_0 | lcd0/SR[0]                 |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | in[1][55]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | in[2][15]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][31]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | in[2][39]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[2][63]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | in[2][55]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[2][31]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[2][47]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[15]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | timer[23]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[31]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[63]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | timer[39]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[55]_i_1_n_0            | done                       |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | timer[47]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[71]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[95]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[87]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | timer[79]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[2][23]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][23]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][15]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][39]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][55]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][47]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[0][63]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[1][15]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | in[1][39]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[1][31]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | in[1][47]_i_1_n_0            | done                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | in[1][23]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | in[1][63]_i_1_n_0            | done                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | row_A[110]_i_1_n_0           |                            |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | row_A[110]_i_1_n_0           | FSM_onehot_P_reg_n_0_[1]   |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG |                              | btn_db0/clear              |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG | lcd0/lcd_initialized_reg_n_0 | lcd0/text_count[0]_i_1_n_0 |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG | row_A[110]_i_1_n_0           | done                       |                6 |             29 |         4.83 |
+|  clk_IBUF_BUFG | lcd0/init_e_i_2_n_0          | lcd0/SR[0]                 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | FSM_onehot_P_reg_n_0_[1]     | done                       |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | m2/E[0]                      |                            |               20 |             64 |         3.20 |
+|  clk_IBUF_BUFG | row_A[110]_i_1_n_0           | row_A[63]_i_1_n_0          |               21 |             75 |         3.57 |
+|  clk_IBUF_BUFG |                              |                            |             4756 |          26209 |         5.51 |
++----------------+------------------------------+----------------------------+------------------+----------------+--------------+
+
+

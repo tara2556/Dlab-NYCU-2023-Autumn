@@ -1,0 +1,616 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Sun Dec 17 18:12:13 2023
+| Host         : LAPTOP-C2VAUNDT running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35ti
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   538 |
+|    Minimum number of control sets                        |   538 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |  1114 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   538 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |   512 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              60 |           25 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             205 |           83 |
+| Yes          | No                    | No                     |            3072 |         1544 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             165 |           57 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |          Enable Signal          |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  vga_clk       |                                 |                                     |                1 |              1 |         1.00 |
+|  vga_clk       |                                 | game/snake_rate2                    |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG | game/map_pos_next[1][0]_i_1_n_0 | game/snake_rate2                    |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | display/score_bcd[3][3]_i_1_n_0 | game/snake_rate2                    |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | display/score_bcd[2][3]_i_1_n_0 | game/snake_rate2                    |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | display/vs0/E[0]                | game/snake_rate2                    |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | display/score_bcd[1][3]_i_1_n_0 | game/snake_rate2                    |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_22[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map[2][12][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][15][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][11][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][1][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][14][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][13][5]_i_1__0_n_0   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map[2][2][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][3][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[0][5][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][4][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][6][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[0][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][10][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][13][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[0][12][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][11][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][14][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][1][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][2][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[0][15][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[0][3][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/E[0]                       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_1[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_10[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_12[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_14[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_3[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_2[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_4[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_6[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_7[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_9[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_0[0]    |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_1[0]    |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_15[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_5[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_11[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_10[0]   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_11[0]   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_13[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_16[0]   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_17[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_18[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_19[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_2[0]    |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_20[0]   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_21[0]   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_23[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_24[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_25[0]   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_26[0]   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_27[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_8[0]        |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_12[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_13[0]       |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_14[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_15[0]   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_28[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_0[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_29[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_12[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_12[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_32[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_2[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_33[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_30[0]   |                                     |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_3[0]    |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_35[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_40[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_16[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_23[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_15[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_31[0]   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_39[0]   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep__0_2[0] |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_45[0]   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_14[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_25[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_26[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_27[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_34[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_6[0]    |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_21[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_28[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_29[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_7[0]    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_44[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep_0[0]    |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_0[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_1[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep_4[0]    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_20[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_22[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_4[0]    |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_10[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_11[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_17[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_42[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_30[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_31[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_32[0]       |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_3[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_43[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep_1[0]    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_18[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_33[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_8[0]    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_38[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_41[0]   |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_9[0]    |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_46[0]   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep__0_1[0] |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_13[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_19[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_24[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_34[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_35[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_47[0]   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_36[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep_2[0]    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_5[0]    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_36[0]   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep_3[0]    |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[0]_rep_37[0]   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[1]_rep__0_0[0] |                                     |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_7[0] |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_14[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_6[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_39[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_4[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_20[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_21[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_3[0] |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_5[0] |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_8[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_8[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_1[0] |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_6[0] |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_0[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_0[0] |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_9[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_10[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_11[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_7[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_2[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_5[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_3[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_3[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_7[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_9[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_1[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_14[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_17[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_8[0] |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_8[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_9[0] |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_0[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_1[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_10[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_19[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_4[0] |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_11[0]       |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_12[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_13[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_14[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_15[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_18[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_10[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_11[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_37[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_13[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_0[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_5[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_6[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_rep__2_2[0] |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_13[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_4[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_5[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_12[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_6[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_15[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_9[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_38[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_16[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_4[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[2]_7[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[4]_1[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[3]_2[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_12[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_13[0]       |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_9[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_15[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_31[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_36[0]       |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_38[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_25[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_40[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_5[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_14[0]       |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_24[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_15[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_0[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_27[0]       |                                     |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_16[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_17[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_8[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_18[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_19[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_3[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_30[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_34[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_41[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_9[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_1[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_10[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_2[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_5[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_16[0]       |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_17[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_19[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_11[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_12[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_7[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_22[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_28[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_39[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_43[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_32[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_33[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_37[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_6[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_2[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_4[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_7[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_8[0]        |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_14[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_23[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_42[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_6[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_26[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_0[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_1[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_10[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_18[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_3[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_11[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_20[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[5]_4[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_29[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_21[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_13[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[6]_35[0]       |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_27[0]       |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_3[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_2[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_34[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_21[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_5[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_9[0]        |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_25[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_4[0]        |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_26[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_20[0]       |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_29[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_31[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_6[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_8[0]        |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_35[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_28[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_32[0]       |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_22[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_30[0]       |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_33[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_23[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_24[0]       |                                     |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | game/map_pos_reg[7]_7[0]        |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][11][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][10][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][12][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][1][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][15][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][2][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][3][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][14][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][13][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[3][4][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][6][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][5][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][7][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[3][8][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][10][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[4][11][5]_i_1__0_n_0   |                                     |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG | game/map[3][9][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][12][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][13][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[4][14][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[4][3][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][15][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[4][1][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][2][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][4][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][8][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[4][7][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[4][9][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[4][6][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[4][5][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][10][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][12][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][14][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[5][15][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][1][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][11][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][13][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][4][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][6][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][5][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[5][7][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][3][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][2][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][8][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[6][11][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[5][9][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[6][10][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[6][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[6][12][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[6][14][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[6][15][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[6][1][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[6][13][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[6][5][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[6][2][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[6][6][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[6][3][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[6][4][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[6][7][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[7][10][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[6][8][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[6][9][5]_i_1__0_n_0    |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map[7][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[7][11][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][13][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[7][12][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][14][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[7][1][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][15][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][4][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[7][3][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[7][5][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[7][2][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][6][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][7][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][9][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[8][10][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[8][0][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[7][8][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[8][11][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[8][14][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[8][12][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[8][1][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[8][15][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[8][2][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[8][13][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[8][7][5]_i_1__0_n_0    |                                     |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG | game/map[8][8][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[8][5][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[8][4][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[8][3][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[8][6][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[9][10][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[9][11][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[8][9][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][12][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][0][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][15][5]_i_1__0_n_0   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map[9][2][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][13][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[9][3][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][1][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][14][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[9][4][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[9][6][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][9][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][8][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[9][5][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[9][7][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][5][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][6][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][9][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[2][4][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][7][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][8][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[0][9][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[0][7][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[0][8][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[10][11][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][12][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][14][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[10][10][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][0][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][13][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][2][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][1][5]_i_1__0_n_0   |                                     |                6 |              6 |         1.00 |
+|  clk_IBUF_BUFG | game/map[10][3][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][4][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[10][15][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[10][5][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][8][5]_i_1__0_n_0   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map[11][0][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[10][7][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[10][9][5]_i_1__0_n_0   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map[10][6][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[11][11][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[11][13][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[11][10][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[11][14][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[11][12][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[11][15][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[11][1][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[11][2][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[11][5][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[11][3][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[11][4][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[11][7][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[11][8][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[11][6][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[12][10][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[11][9][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][0][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[12][12][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][13][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][11][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[12][15][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][14][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[12][1][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][2][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][3][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[12][5][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][7][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][6][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[12][4][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[13][0][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[12][8][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][10][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[13][11][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[13][12][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[12][9][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][1][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][13][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][14][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[13][2][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[13][15][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][3][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][6][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][7][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][4][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[13][8][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][9][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[14][0][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[13][5][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[14][10][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][11][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[14][13][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[14][12][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[14][14][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[14][4][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[14][3][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[14][2][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][1][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[14][5][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][15][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][6][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[15][0][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][9][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[15][10][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][8][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[14][7][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[15][14][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[15][13][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[15][15][5]_i_1__0_n_0  |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[15][1][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[15][11][5]_i_1__0_n_0  |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[15][12][5]_i_1__0_n_0  |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[15][3][5]_i_1__0_n_0   |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[15][5][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[15][2][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[15][7][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[15][4][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[15][6][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[15][9][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][0][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[15][8][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[1][11][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][12][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[1][10][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[1][13][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[1][15][5]_i_1__0_n_0   |                                     |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | game/map[1][14][5]_i_1__0_n_0   |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][1][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][2][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][4][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][5][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[1][3][5]_i_1__0_n_0    |                                     |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | game/map[1][6][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][7][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][0][5]_i_1__0_n_0    |                                     |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | game/map[1][8][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[1][9][5]_i_1__0_n_0    |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/map[2][10][5]_i_1__0_n_0   |                                     |                5 |              6 |         1.20 |
+|  clk_IBUF_BUFG | game/ram0/FSM_onehot_P_reg[2]   | game/snake_rate2                    |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | display/vs0/i_reg[1][0]         | game/snake_rate2                    |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | game/FSM_onehot_P_reg[1]_0[0]   | game/snake_rate2                    |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | game/score[9]_i_2_n_0           | game/score[9]_i_1_n_0               |                4 |             10 |         2.50 |
+|  vga_clk       | display/vs0/h_count_next        | display/vs0/v_count_reg_reg[1]_0[0] |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | display/vs0/pixel_tick          | display/vs0/SR[0]                   |                5 |             12 |         2.40 |
+|  vga_clk       | display/vs0/pixel_tick          | display/vs0/mod2_reg_reg_0          |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG |                                 | game/init_counter[0]_i_1_n_0        |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG | game/ram0/RAM_reg_23            | game/snake_rate2                    |                8 |             14 |         1.75 |
+|  clk_IBUF_BUFG |                                 | display/vs0/v_count_reg_reg[6]_1[0] |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG |                                 | display/vs0/is_dead_reg[0]          |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG |                                 | db0/counter[0]_i_1_n_0              |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG |                                 | db1/counter[0]_i_1__0_n_0           |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG |                                 | db2/counter[0]_i_1__1_n_0           |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG |                                 | db3/clear                           |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG | game/tick[0]_i_1_n_0            | game/snake_rate2                    |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG | game/FSM_onehot_P_reg_n_0_[2]   | game/snake_counter[0]_i_1_n_0       |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG |                                 |                                     |               24 |             59 |         2.46 |
+|  clk_IBUF_BUFG |                                 | game/snake_rate2                    |               41 |             69 |         1.68 |
++----------------+---------------------------------+-------------------------------------+------------------+----------------+--------------+
+
+

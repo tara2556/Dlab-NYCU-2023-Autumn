@@ -1,0 +1,17 @@
+Time resolution is 1 ps
+							            INPUTS                      REAL    OUTPUT  
+
+						 CODE     DATA IN    ACCUM IN      ALU OUT   ZERO BIT
+					      ------   --------   --------      --------  --------
+AND OPERATION       :      011     10100010   00000000  |   00000000      1
+UNKNOWN OPERATION   :      xxx     01101101   00000000  |   00000000      1
+SUB OPERATION       :      010     00011101   00001111  |   11110010      0
+MUL OPERATION       :      110     00001101   00001011  |   10001111      0
+ABS OPERATION       :      101     01001000   10101010  |   01010110      0
+PASS ACCUM OPERATION:      000     00111101   11100110  |   11100110      0
+ABS OPERATION       :      101     11111001   00110111  |   00110111      0
+ADD OPERATION       :      001     00110010   10001101  |   10111111      0
+SUB OPERATION       :      010     11111111   10101001  |   10101010      0
+PASS DATA OPERATION :      111     10111110   10011000  |   10111110      0
+MUL OPERATION       :      110     00000010   00001010  |   00010100      0
+SUB OPERATION       :      010     10101000   01101100  |   11000100      0
